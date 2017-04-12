@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>我的聊天室</title>
+        <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+         <script type="text/javascript" src= "/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="/bootstrap/dist/js/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="/bootstrap/dist/js/bootstrap.js"></script>
+         <script type="text/javascript" src="/js/client.js"></script>
+    </head>
+    <body onload="window_onload()"  onunload="window_onunload()" >
+            <div class="container">
+                   <!-- 顶部模块 -->
+                    <div id="header">
+                             <h1 class="text-center">我的聊天室</h1>
+                             <div class="form-inline form-group">
+                                          <label for="usernam">用户名:</label>
+                                          <input placeholder="请输入用户名" type="text" class="form-control" id="tbxUsername">
+                                            <input type="button" id="btnLogin" class="btn btn-success" onclick="btnLogin()" value="登录">
+                                            <input type="button" id="btnLogout" class="btn btn-danger" onclick="btnLogout()" value="退出">
+                             </div>
+                    </div>
+                     <!-- 左半模块 -->
+                     <div id = "left">
+                            <div id="divChat"></div>
+                             <div id="send">
+                                    <div class="form-inline form-group">
+                                           <label>对话：</label>
+                                           <input type="text" id="tbxMsg" class="form-control" placeholder="请输入发送内容">
+                                           <button class="btn btn-info" id="btnSend"  type="submit" onclick="btnSend()">发送</button>
+                                    </div>
+                             </div>
+                      </div>
+                      <!-- 用户列表模块 -->
+                     <div id = "right">
+                          <h4>用户列表：</h4>
+                     </div>
+            </div>
+    </body>
+</html>
